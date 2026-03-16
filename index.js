@@ -86,7 +86,7 @@ app.post("/series", (req, res) => {
     const descicao = req.body.description
     const anodelancamento = req.body.releaseYear
 
-    if(nomeDaserie ||!nomeDaserie.length <= 1|| !genero || !descicao || !anodelancamento){
+    if(!nomeDaserie || nomeDaserie.length <= 1|| !genero || !descicao || !anodelancamento){
         return res.status(400).json({error:"Nome do filme, gênero, descrição e ano de lançamento são obrigatórios!"})
     }
 
