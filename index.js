@@ -63,7 +63,7 @@ app.post("/filmes", (req, res) => {
     const descicao = req.body.description
     const anodelancamento = req.body.releaseYear
 
-    if( !nomeDoFilme || nomeDoFilme.length >=  1 || !genero || !descicao || !anodelancamento){
+    if( !nomeDoFilme || nomeDoFilme.length <=  1 || !genero || !descicao || !anodelancamento){
         return res.status(400).json({error:"Nome do filme, gênero, descrição e ano de lançamento são obrigatórios!"})
     }
 
@@ -75,7 +75,7 @@ app.post("/filmes", (req, res) => {
         releaseYear: anodelancamento,
     }
 
-    filmes.push(novoFilme, id++)
+    filmes.push(novoFilme)
     res.status(201).send()
 
 })
@@ -86,7 +86,7 @@ app.post("/series", (req, res) => {
     const descicao = req.body.description
     const anodelancamento = req.body.releaseYear
 
-    if(nomeDaserie ||!nomeDaserie.length >= 1|| !genero || !descicao || !anodelancamento){
+    if(nomeDaserie ||!nomeDaserie.length <= 1|| !genero || !descicao || !anodelancamento){
         return res.status(400).json({error:"Nome do filme, gênero, descrição e ano de lançamento são obrigatórios!"})
     }
 
@@ -98,7 +98,7 @@ app.post("/series", (req, res) => {
         releaseYear: anodelancamento,
     }
 
-    series.push(novaSerie, id++)
+    series.push(novaSerie)
     res.status(201).send()
 })
 
