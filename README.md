@@ -44,7 +44,7 @@ permitindo realizar operações de cadastro e pesquisa com filtros.
 
 
 - Criação de filmes
-  <img width="1073" height="794" alt="image" src="https://github.com/user-attachments/assets/0fc9ca60-7dce-405d-bc86-05b94d98fe88" />
+<img width="1073" height="794" alt="image" src="https://github.com/user-attachments/assets/0fc9ca60-7dce-405d-bc86-05b94d98fe88" />
 
 
 
